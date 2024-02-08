@@ -1,10 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from 'react';
 import './App.css';
+import { Container } from "@mui/material";
+import Header from "./components/Header/Header";
+
 
 function App() {
   const [word, setWord] = useState("");
   const [meanings, setMeanings] = useState([]);
+  const [category, setCategory] = useState("en")
 
   const dictionaryApi = async() => {
     try {
@@ -24,8 +28,12 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-    Dictionary
+    <div className="App" style={{height:'100vh', backgroundColor:"grey", color: 'white'}}>
+    <Container maxWidth="md" style={{display:"flex", flexDirection: "column", height:"100vh"}}>
+    
+    <Header category={category} setCategory={setCategory} word={word} setWord={setWord}/>
+    </Container>
+    
     </div>
   );
 }
