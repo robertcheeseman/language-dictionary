@@ -3,10 +3,14 @@ import './Definitions.css';
 
 const Definitions = (word, category, meanings) => {
   return (
-    <div>
-        {word === ""? (<span className='subTitle'>Start by typing a word in the search box</span>) : ("Something")} 
+    <div className='meanings'>
+        {word === "" ? (
+            <span className='subTitle'>Start by typing a word in the search box</span>
+        ) : ( 
+            meanings.map((mean) => mean.meanings.map((item) => console.log(item)))
+         )} 
     </div>
-  )
-}
+  );
+};
 
 export default Definitions

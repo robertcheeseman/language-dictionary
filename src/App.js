@@ -2,8 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from 'react';
 import './App.css';
 import { Container } from "@mui/material";
-import Header from "./components/Header/Header";
 import Definitions from "./components/Definitions/Definitions";
+import Header from "./components/Header/Header";
 
 
 function App() {
@@ -15,14 +15,12 @@ function App() {
     try {
       const data = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`);
       setMeanings(data.data);
-
     } catch (error) {
-      console.log(error)
-      
+      console.log(error)     
     }
   }
 
-  console.log(meanings);
+  // console.log(meanings);
 
   useEffect(() => {
     dictionaryApi();
