@@ -2,9 +2,11 @@ import React from 'react';
 import './Definitions.css';
 
 const Definitions = (word, category, meanings) => {
+
   return (
     <div className='meanings'>
-        <span>This is a span</span>
+    
+        <p>On the definitions page you looked up {word}</p>
     </div>
   );
 };

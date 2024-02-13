@@ -31,10 +31,13 @@ function App() {
     <div className="App" style={{height:'100vh', backgroundColor:"grey", color: 'white'}}>
     <Container maxWidth="md" style={{display:"flex", flexDirection: "column", height:"100vh"}}>
     
-      <Header category={category} setCategory={setCategory} word={word} setWord={setWord}/>
+      <Header setWord={setWord} category={category} setCategory={setCategory} word={word} />
      {meanings && (
      <Definitions word={word} meanings={meanings} category={category}/>
      )}
+     <p>This is the word: {word}</p>
+     <p>This is the category: {category}</p>
+
     </Container>
     
     </div> 
