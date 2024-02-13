@@ -19,8 +19,8 @@ function App() {
       console.log(error)     
     }
   }
-
-  // console.log(meanings);
+  console.log(word)
+  console.log(meanings);
 
   useEffect(() => {
     dictionaryApi();

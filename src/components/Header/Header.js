@@ -13,10 +13,11 @@ const Header = ({ setCategory, category, word, setWord }) => {
         },
       });
 
-      const handleChange = (language) => {
-            setCategory(language);
-            setWord("");
-      }
+    const handleChange = (language) => {
+        setCategory(language);
+        setWord("");
+    }
+    
   return (
     <div className='header'>
         <span className='title'>{word ? word : "Word Hunt"}</span>
